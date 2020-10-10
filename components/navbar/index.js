@@ -4,7 +4,7 @@ import React from "react";
 
 function Navbar() {
     return (
-        <div>
+        <div class="navButtons">
             <button class="newGame">New Game</button>
             <button class="highScores">High Scores</button>
             <button Class="signOut">Sign Out</button>
