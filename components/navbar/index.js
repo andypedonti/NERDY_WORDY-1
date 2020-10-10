@@ -1,0 +1,1 @@
+//this is the component that new game, high scores, and sign out tab

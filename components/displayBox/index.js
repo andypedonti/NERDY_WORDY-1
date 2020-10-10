@@ -1,0 +1,1 @@
+//this is the file that displays the word for kids to catch
