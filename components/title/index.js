@@ -5,7 +5,7 @@ import React from "react";
 function Title() {
     return (
         <div className="title">
-            <h1 className="titleText">NERDY WORD</h1>
+            <h1 className="titleText">NERDY WORDY</h1>
         </div>
     )
 }
