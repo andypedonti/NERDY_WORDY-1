@@ -46,37 +46,43 @@ const Login = () => {
     <div className="text-center">
       <h4>Login</h4>
       <form className="form-signin">
-        <label htmlFor="inputEmail" className="sr-only">
-          Email address
-        </label>
-        <input
-          type="email"
-          id="inputEmail"
-          className="form-control"
-          name="username"
-          placeholder="Email address"
-          value={loginCreds.username}
-          onChange={handleChange}
-        />
-        <label htmlFor="inputPassword" className="sr-only">
-          Password
-        </label>
-        <input
-          type="password"
-          id="inputPassword"
-          className="form-control"
-          name="password"
-          placeholder="Password"
-          value={loginCreds.password}
-          onChange={handleChange}
-        />
-        <button
-          className="btn btn-lg btn-primary btn-block"
-          type="submit"
-          onClick={handleSubmit}
-        >
-          Login
-        </button>
+        <div className="container">
+          <label htmlFor="inputEmail" className="sr-only">
+            Email address
+          </label>
+          <input
+            type="email"
+            id="inputEmail"
+            className="form-control"
+            name="username"
+            placeholder="Email address"
+            value={loginCreds.username}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="container">
+          <label htmlFor="inputPassword" className="sr-only">
+            Password
+          </label>
+          <input
+            type="password"
+            id="inputPassword"
+            className="form-control"
+            name="password"
+            placeholder="Password"
+            value={loginCreds.password}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="container">
+          <button
+            className="btn btn-lg btn-primary btn-block"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Login
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -2,9 +2,15 @@
 
 import React from "react";
 
+var randomWords = require('random-words');
+
 function DisplayBox() {
     return (
-        //code for display box
+        <div>
+            {
+                randomWords({ exactly: 1, maxLength: 4 })
+            }
+        </div>
     )
 }
 
