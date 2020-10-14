@@ -1,7 +1,11 @@
 import React from 'react';
+import DisplayBox from '../components/displayBox'
 
 const Home = (props) => {
-  return <div>WE ARE LOGGED IN</div>;
+  return (<div>
+    <DisplayBox />
+  </div>
+  );
 };
 
 Home.propTypes = {};
