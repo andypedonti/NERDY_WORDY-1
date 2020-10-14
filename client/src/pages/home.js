@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import "./home.js";
 import DisplayBox from '../components/displayBox'
 
 const Home = (props) => {

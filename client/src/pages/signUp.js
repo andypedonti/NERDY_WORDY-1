@@ -1,13 +1,14 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import axios from "axios";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import "./signup.css";
 
 const SignUp = () => {
   const history = useHistory();
 
   const [signUpCreds, setSignUpCreds] = useState({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
   });
 
   const handleChange = (event) => {
@@ -20,15 +21,15 @@ const SignUp = () => {
     event.preventDefault();
 
     axios
-      .post('/api/users', {
+      .post("/api/users", {
         username: signUpCreds.username,
         password: signUpCreds.password,
       })
       .then((response) => {
         if (!response.data.error) {
-          history.replace('/login');
+          history.replace("/login");
         } else {
-          console.log('USERNAME TAKEN');
+          console.log("USERNAME TAKEN");
         }
       })
       .catch((error) => {
@@ -39,7 +40,7 @@ const SignUp = () => {
   return (
     <div className="text-center">
       <h4>Sign Up</h4>
-      <form className="form-signin">
+      <form className="form-signup">
         <label htmlFor="inputEmail" className="sr-only">
           Email address
         </label>
@@ -64,7 +65,11 @@ const SignUp = () => {
           value={signUpCreds.password}
           onChange={handleChange}
         />
-        <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={handleSubmit}>
+        <button
+          className="btn btn-lg btn-primary btn-block"
+          type="submit"
+          onClick={handleSubmit}
+        >
           Sign Up
         </button>
       </form>
