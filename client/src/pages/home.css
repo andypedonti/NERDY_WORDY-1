@@ -1,0 +1,10 @@
+.display-box {
+  background-color: darkslateblue;
+  color: white;
+  width: 400px;
+  font-size: 60px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 100px;
+}
