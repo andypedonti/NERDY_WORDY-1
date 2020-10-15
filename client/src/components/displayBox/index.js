@@ -8,7 +8,7 @@ function DisplayBox() {
     return (
         <div>
             {
-                randomWords({ exactly: 1, maxLength: 4 })
+                randomWords({ exactly: 1, maxLength: 4, formatter: (word) => word.toUpperCase() })
             }
         </div>
     )

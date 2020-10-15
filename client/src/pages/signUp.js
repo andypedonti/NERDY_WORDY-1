@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import "./signup.css";
+//import "./signup.css";
 
 const SignUp = () => {
   const history = useHistory();
