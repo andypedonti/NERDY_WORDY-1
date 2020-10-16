@@ -24,6 +24,15 @@ body{
 
 }
 
+.gameBoard {
+  width: 600px;
+}
+
+.gameBoard .card {
+  width: 100px;
+  float: left;
+}
+
 /* styl */
 .flexbox .board {
   display: flex;

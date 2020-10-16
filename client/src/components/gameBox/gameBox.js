@@ -32,7 +32,7 @@ const GameBox = () => {
    <div className="App">
       <main className="flexbox">
       
-        <Board id="board-1" className="board">
+        <Board className="gameBoard">
           <Card id="letterB-1" className="card" draggable="true">
             <p><img id="letterB-10" src={letter.first} className="img-background"></img></p>
            </Card>
