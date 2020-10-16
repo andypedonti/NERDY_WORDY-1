@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(95, 158, 160);
+}
+
+.flexbox{
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 768px;
+  height: 100vh;
+
+  overflow: hidden;
+
+  /* center margin */
+  margin: 0 auto;
+  padding: 15px;
+
+}
+
+/* styl */
+.flexbox .board {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 300px;
+
+  background-color: #313131;
+
+  padding: 15px;
+
+}
+
+.flexbox .board .card {
+  padding: 10px 38px;
+  background-color: #F3F3F3;
+
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.img-background{
+  background: transparent ;
+  position: relative;
+  margin-left: 200px; 
+  width: 25%;
+}
+
+img {
+  animation: img-background 7s infinite
+}
+
+@keyframes img-background {
+  from {top: 0px;}
+  to {top: 600px;}
+}
+
+

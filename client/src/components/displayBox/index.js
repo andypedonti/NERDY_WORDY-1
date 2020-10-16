@@ -6,7 +6,7 @@ var randomWords = require('random-words');
 
 function DisplayBox() {
     return (
-        <div>
+        <div className="display-box">
             {
                 randomWords({ exactly: 1, maxLength: 4, formatter: (word) => word.toUpperCase() })
             }
