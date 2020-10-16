@@ -25,8 +25,12 @@ body{
 }
 
 .gameBoard {
-  width: 600px;
+  width: 290px;
+  height: 650px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 0px yellow;
   background-color: green;
+  margin-right: 80px;
 }
 
 .gameBoard .card {
@@ -39,14 +43,13 @@ body{
 .flexbox .board {
   display: flex;
   flex-direction: column;
-
   width: 100%;
-  max-width: 300px;
-
+  width: 300px;
+  height: 650px;
   background-color: #313131;
-
   padding: 15px;
-
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 0px yellow;
 }
 
 .flexbox .board .card {
