@@ -8,6 +8,7 @@ body{
   background-color: rgb(95, 158, 160);
 }
 
+
 .flexbox{
   display: flex;
   justify-content: space-between;
@@ -32,19 +33,20 @@ body{
   width: 100%;
   max-width: 300px;
 
-  background-color: #313131;
+  background-color: #50b4e2;
+
 
   padding: 15px;
 
-}
-
-.flexbox .board .card {
-  padding: 10px 38px;
-  background-color: #F3F3F3;
-
   cursor: pointer;
   margin-bottom: 15px;
+
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
+
+
+
 
 .img-background{
   background: transparent ;
@@ -54,12 +56,21 @@ body{
 }
 
 img {
-  animation: img-background 7s infinite
+  animation: img-background 10s infinite
 }
 
 @keyframes img-background {
   from {top: 0px;}
   to {top: 600px;}
 }
+
+.result{
+  background: transparent ;
+  position: relative;
+  margin-left: 200px; 
+  width: 25%;
+}
+
+
 
 
