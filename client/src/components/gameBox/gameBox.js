@@ -14,16 +14,25 @@ const GameBox = () => {
   const [ letter, setLetter ] = useState(
     {
       first: ABCs[Math.floor(Math.random() * ABCs.length)],
-      second: ABCs[Math.floor(Math.random() * ABCs.length)]
+      second: ABCs[Math.floor(Math.random() * ABCs.length)],
+      third: ABCs[Math.floor(Math.random() * ABCs.length)],
+      fourth: ABCs[Math.floor(Math.random() * ABCs.length)],
+      fifth: ABCs[Math.floor(Math.random() * ABCs.length)]
     })
 
   useEffect(() => {
     setInterval(() => {
       const randomABCs1 = ABCs[Math.floor(Math.random() * ABCs.length)];
       const randomABCs2 = ABCs[Math.floor(Math.random() * ABCs.length)];
+      const randomABCs3 = ABCs[Math.floor(Math.random() * ABCs.length)];
+      const randomABCs4 = ABCs[Math.floor(Math.random() * ABCs.length)];
+      const randomABCs5 = ABCs[Math.floor(Math.random() * ABCs.length)];
       setLetter({
         first: "ABCs/"+randomABCs1+".png",
-        second: "ABCs/"+randomABCs2+".png"
+        second: "ABCs/"+randomABCs2+".png",
+        third: "ABCs/"+randomABCs3+".png",
+        fourth: "ABCs/"+randomABCs4+".png",
+        fifth: "ABCs/"+randomABCs5+".png"
       })
     }, 7000);
   }, [])
@@ -32,13 +41,21 @@ const GameBox = () => {
    <div className="App">
       <main className="flexbox">
       
-        <Board id="board-1" className="board">
+        <Board className="gameBoard">
           <Card id="letterB-1" className="card" draggable="true">
             <p><img id="letterB-10" src={letter.first} className="img-background"></img></p>
-           </Card>
-        
+          </Card>
           <Card id="letterB-1" className="card" draggable="true">
             <p><img id="letterB-10" src={letter.second} className="img-background"></img></p>
+          </Card>        
+          <Card id="letterB-1" className="card" draggable="true">
+            <p><img id="letterB-10" src={letter.third} className="img-background"></img></p>
+          </Card>
+          <Card id="letterB-1" className="card" draggable="true">
+            <p><img id="letterB-10" src={letter.fourth} className="img-background"></img></p>
+          </Card>
+          <Card id="letterB-1" className="card" draggable="true">
+            <p><img id="letterB-10" src={letter.fifth} className="img-background"></img></p>
           </Card>
         </Board>
 
