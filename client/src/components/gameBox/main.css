@@ -8,20 +8,17 @@ body{
   background-color: rgb(95, 158, 160);
 }
 
+
 .flexbox{
   display: flex;
   justify-content: space-between;
-
   width: 100%;
   max-width: 768px;
   height: 100vh;
-
   overflow: hidden;
-
   /* center margin */
   margin: 0 auto;
   padding: 15px;
-
 }
 
 .gameBoard {
@@ -44,20 +41,13 @@ body{
   display: flex;
   flex-direction: column;
   width: 100%;
-  width: 300px;
-  height: 650px;
-  background-color: #313131;
+  max-width: 300px;
+  background-color: #50b4e2;
   padding: 15px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 30px 0px yellow;
-}
-
-.flexbox .board .card {
-  padding: 10px 38px;
-  background-color: #F3F3F3;
-
   cursor: pointer;
   margin-bottom: 15px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 .img-background{
@@ -68,7 +58,7 @@ body{
 }
 
 img {
-  animation: img-background 7s infinite
+  animation: img-background 10s infinite
 }
 
 @keyframes img-background {
@@ -76,4 +66,9 @@ img {
   to {top: 600px;}
 }
 
-
+.result{
+  background: transparent ;
+  position: relative;
+  margin-left: 200px; 
+  width: 25%;
+}
