@@ -14,22 +14,22 @@ const Navbar = () => {
     dispatch({ type: LOADING });
 
     axios
-      .post('/api/users/logout')
-      .then((response) => {
-        if (response.status === 200) {
-          dispatch({ type: UNSET_USER });
-          history.replace('/login');
-        }
-      })
-      .catch((error) => {
-        console.log('Logout error');
-      });
+    .post('/api/users/logout')
+    .then((response) => {
+      if (response.status === 200) {
+        dispatch({ type: UNSET_USER });
+        history.replace('/login');
+      }
+    })
+    .catch((error) => {
+      console.log('Logout error');
+    });
   };
-
+  
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link to="/" className="btn btn-link text-secondary">
-        <span className="text-secondary">home</span>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <Link to="/" className="btn btn-link text-light">
+        <span className="text-light"><h3>HOME</h3></span>
       </Link>
       <button
         className="navbar-toggler"
@@ -46,26 +46,27 @@ const Navbar = () => {
         <ul className="navbar-nav">
           {state.user ? (
             <li className="nav-item active">
-              <Link to="#" className="btn btn-link text-secondary" onClick={logout}>
-                <span className="text-secondary">logout</span>
+              <Link to="#" className="btn btn-link text-light" onClick={logout}>
+                <span className="text-light"><h3>LOGOUT</h3></span>
               </Link>
             </li>
           ) : (
             <>
               <li className="nav-item active">
                 <Link to="/login" className="btn btn-link text-secondary">
-                  <span className="text-secondary">login</span>
+                  <span className="text-light"><h3>LOGIN</h3></span>
                 </Link>
               </li>
               <li className="nav-item active">
                 <Link to="/signup" className="btn btn-link">
-                  <span className="text-secondary">sign up</span>
+                  <span className="text-light"><h3>SIGN UP</h3></span>
                 </Link>
               </li>
             </>
           )}
         </ul>
       </div>
+      <a class="navbar-brand"><h1>NERDY WORDY</h1></a>
     </nav>
   );
 };
