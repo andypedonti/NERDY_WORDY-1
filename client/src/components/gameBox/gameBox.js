@@ -1,6 +1,8 @@
 import React from 'react';
 import Board from "./boards";
 import Letter from './letter';
+import "./main.css";
+
 
 
 export const ABCs = ["A", "B", "C", "D", "E", "F", "G", "H",
@@ -9,12 +11,12 @@ export const ABCs = ["A", "B", "C", "D", "E", "F", "G", "H",
 
 function GameBox() {
   return (
-   <div className="App">
+   <div className="gameBox">
       <main className="flexbox">
         <Board id="board-1" className="board">
-           <Letter className="card" draggable="true" />          
+           <Letter className="letter" draggable="true" />          
         </Board>
-        <Board id="board-2" className="board">
+        <Board id="board-2" className="result">
             <p id="results"></p>
         </Board>
       </main>
