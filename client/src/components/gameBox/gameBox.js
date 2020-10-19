@@ -1,5 +1,5 @@
 import React from 'react';
-import Board from "./boards";
+import Board from "./Boards";
 import Letter from './letter';
 import "./main.css";
 
