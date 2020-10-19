@@ -16,7 +16,7 @@ class Scoreboard extends React.Component {
             <div className="scoreboard">
               {context.state.isInGameLoop ? (
                 <h2 className="scoreboard-score animated fadeIn">
-                  Score- <br /> {context.state.score}
+                  Score: <br /> {context.state.score}
                 </h2>
               ) : null}
 
