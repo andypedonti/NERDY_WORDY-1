@@ -1,3 +1,8 @@
 .container {
   padding-bottom: 20px;
+  text-align: center;
+}
+
+.form-signup {
+  align: center;
 }
