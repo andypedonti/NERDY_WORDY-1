@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-
-
 function Board(props) {
   const [results, setResults] = useState('')
   let landZone = null;
