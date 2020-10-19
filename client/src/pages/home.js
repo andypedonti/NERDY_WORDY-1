@@ -5,7 +5,8 @@ import GameBox from '../components/gameBox/gameBox';
 import "./home.css";
 
 const Home = (props) => {
-  return (<div>
+  return (
+  <div>
     <DisplayBox />
     <GameBox />
   </div>
