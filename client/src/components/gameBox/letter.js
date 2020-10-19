@@ -1,57 +1,55 @@
 import React, { useState } from 'react';
-import { ABCs } from './gameBox.js';
 
 const Letter = props => {
-    const [ letter, setLetter ] = useState(
-        ABCs[Math.floor(Math.random() * ABCs.length)]);
+  const ABCs = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-        const dragStart = e => {
-            const target = e.target;
+  const [ letter, setLetter ] = useState(
+    ABCs[Math.floor(Math.random() * ABCs.length)]);
 
-     e.dataTransfer.setData("letter", letter);
+  const dragStart = e => {
+    const target = e.target;
+    e.dataTransfer.setData("letter", letter);
+    setTimeout(() => {
+    target.style.display = "none";
+    }, 0);
+  }
 
-     setTimeout(() => {
-        target.style.display = "none";
-     }, 0);
+  const dragOver = e => {
+    e.preventDefault();
+  }
+  // console.log("DRAGOVER: ", dragOver)
 
-    }
+  const dragLeave = e => {
+    e.preventDefault();
+  }
+  // console.log("DRAGLEAVE: ", dragLeave)
 
-    const dragOver = e => {
-        e.preventDefault();
-        console.log()
-    }
+  const dragEnter = e => {
+    e.preventDefault();
+  }
+  // console.log("DRAGENTER: ", dragEnter)
 
-    const dragLeave = e => {
-        e.preventDefault();
-        console.log(dragLeave);
-    }
-
-    const dragEnter = e => {
-    console.log("drag")
-        e.preventDefault();
-    }
-
-    const DropZone = e => {
-        e.preventDefault();
-        const letter = e.dataTransfer.letter;
-        console.log(letter, DropZone);  
-    }
+  const DropZone = e => {
+    const letter = e.dataTransfer.letter;
+    e.preventDefault();
+  }
+  // console.log("DROPZONE: ", letter, DropZone)
     
-    return (
-        <div
-        id={props.id}
-        className={props.className}
-        draggable={props.draggable}
-        // onClick instad of onDrag
-        onDragStart={dragStart}
-        onDragOver={dragOver}
-        onDragLeave={dragLeave}
-        onDragEnter={dragEnter}
-        onDrop={DropZone}
-        >
-            <p><img id="letterB-10" data-letter={letter} src={`ABCs/${letter}.png`} className="img-background"></img></p>
-        </div>
-    )
+  return (
+    <div
+      id={props.id}
+      className={props.className}
+      draggable={props.draggable}
+      // onClick instad of onDrag
+      onDragStart={dragStart}
+      onDragOver={dragOver}
+      onDragLeave={dragLeave}
+      onDragEnter={dragEnter}
+      onDrop={DropZone}
+      >
+      <p><img id="letterB-10" data-letter={letter} src={`ABCs/${letter}.png`} className="img-background"></img></p>
+    </div>
+  )
 }
 
 export default Letter;
