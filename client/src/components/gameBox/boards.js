@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 function Board(props) {
-  const [results, setResults] = useState('')
-  let landZone = null;
+  const [results, setResults] = useState([])
+  
 
   const drop = e => {
     e.preventDefault();
@@ -10,8 +10,8 @@ function Board(props) {
     const letter = e.dataTransfer.getData("letter");
 
     console.log('letter', letter)
-    landZone = landZone == null ? letter : landZone + letter;
-    setResults(landZone)
+    
+    setResults([ ...results, letter ]);
     }
  
   const dragOver = e => {
