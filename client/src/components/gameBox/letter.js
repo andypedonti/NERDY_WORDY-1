@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 
 const Letter = props => {
-  const ABCs = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
-  const [ letter, setLetter ] = useState(
-    ABCs[Math.floor(Math.random() * ABCs.length)]);
 
   const dragStart = e => {
     const target = e.target;
-    e.dataTransfer.setData("letter", letter);
+    e.dataTransfer.setData("letter", props.letter);
     setTimeout(() => {
     target.style.display = "none";
     }, 0);
@@ -30,8 +26,10 @@ const Letter = props => {
   // console.log("DRAGENTER: ", dragEnter)
 
   const DropZone = e => {
-    const letter = e.dataTransfer.letter;
+    //const letter = e.dataTransfer.letter;
     e.preventDefault();
+    console.log("DROPZONE: ", props.letter, DropZone)
+    props.setNumLetters(Math.floor(Math.random() * 6))
   }
   // console.log("DROPZONE: ", letter, DropZone)
     
@@ -45,9 +43,9 @@ const Letter = props => {
       onDragOver={dragOver}
       onDragLeave={dragLeave}
       onDragEnter={dragEnter}
-      onDrop={DropZone}
+      onDrop={e=>DropZone(e)}
       >
-      <p><img id="letterB-10" data-letter={letter} src={`ABCs/${letter}.png`} className="img-background"></img></p>
+      <p><img id="letterB-10" data-letter={props.letter} src={`ABCs/${props.letter}.png`} className="img-background"></img></p>
     </div>
   )
 }

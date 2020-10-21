@@ -12,6 +12,7 @@ function Board(props) {
     console.log('letter', letter)
     
     setResults([ ...results, letter ]);
+    props.setNumLetters(Math.floor(Math.random() * 80))
     }
  
   const dragOver = e => {

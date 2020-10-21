@@ -16,3 +16,15 @@ function DisplayBox() {
 }
 
 export default DisplayBox;
+
+
+// const compareWords = (word, resultsArray) => {
+//     resultsArray.split().forEach(i => {
+//         if (word.indexOf(i) === -1) {
+//         return false
+//         }
+//         return true
+//     })
+// }
+
+// compareWords("Kobie", ["K", "O", "B", "I", "E"])
