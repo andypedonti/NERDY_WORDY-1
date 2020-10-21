@@ -4,7 +4,7 @@ import Board from "./boards";
 import Letter from "./letter";
 import "./main.css";
 
-function GameBox({ numLetters, setNumLetters }) {
+function GameBox({ numLetters, setNumLetters, word }) {
 
   const ABCs = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   
@@ -30,7 +30,7 @@ function GameBox({ numLetters, setNumLetters }) {
           { returnRandomLetters(numLetters).map(i => 
           <Letter className="letter" draggable="true" letter={i} />)}
         </Board>
-        <Board id="board-2" className="result" setNumLetters={setNumLetters}>
+        <Board id="board-2" className="result" setNumLetters={setNumLetters} word={word}>
             <p id="results"></p>
         </Board>
       </main>
