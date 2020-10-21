@@ -3,6 +3,16 @@ import React, { useState } from "react";
 function Board(props) {
   const [results, setResults] = useState([])
   
+const compareWords = (word, resultsArray) => {
+  word.split().forEach(i => {
+      if (resultsArray.indexOf(i) === -1) {
+      return console.log('fail')
+      }
+      return console.log("win")
+  })
+}
+
+  
 
   const drop = e => {
     e.preventDefault();
@@ -21,12 +31,14 @@ function Board(props) {
 
   console.log("RESULTS", results)
 
+  //compareWords(props.word, results)
+
   return(
     <div>
       <div
       id={props.id}
       className={props.className}
-        onDrop={drop}
+        onDrop={e=>drop(e)}
         onDragOver={dragOver}
         >
         { props.children }

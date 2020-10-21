@@ -2,10 +2,7 @@
 
 import React from "react";
 
-var randomWords = require('random-words');
-const word = randomWords({ exactly: 1, maxLength: 4, formatter: (word) => word.toUpperCase() });
-
-function DisplayBox() {
+function DisplayBox({word}) {
     return (
         <div className="display-box">
             {
@@ -17,14 +14,3 @@ function DisplayBox() {
 
 export default DisplayBox;
 
-
-// const compareWords = (word, resultsArray) => {
-//     resultsArray.split().forEach(i => {
-//         if (word.indexOf(i) === -1) {
-//         return false
-//         }
-//         return true
-//     })
-// }
-
-// compareWords("Kobie", ["K", "O", "B", "I", "E"])
