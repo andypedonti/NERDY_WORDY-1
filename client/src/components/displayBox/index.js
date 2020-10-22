@@ -2,7 +2,10 @@
 
 import React from "react";
 
-function DisplayBox({word}) {
+var randomWords = require('random-words');
+const word = randomWords({ exactly: 1, maxLength: 4, formatter: (word) => word.toUpperCase() });
+
+function DisplayBox() {
     return (
         <div className="display-box">
             {
@@ -13,4 +16,3 @@ function DisplayBox({word}) {
 }
 
 export default DisplayBox;
-
