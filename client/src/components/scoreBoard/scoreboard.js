@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-function Player(props) {
+function scoreBoard(props) {
   return (
     <div>
       <h1> {props.name} </h1>
@@ -19,4 +19,6 @@ render () {
           />      
       )}
     </div>
-}
+};
+
+export default scoreBoard;
