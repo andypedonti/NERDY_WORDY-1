@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Letter = props => {
 
@@ -6,8 +6,9 @@ const Letter = props => {
     const target = e.target;
     e.dataTransfer.setData("letter", props.letter);
     setTimeout(() => {
-    target.style.display = "none";
+      target.style.display = "none";
     }, 0);
+
   }
 
   const dragOver = e => {
@@ -22,17 +23,26 @@ const Letter = props => {
 
   const dragEnter = e => {
     e.preventDefault();
+    e.dataTransfer.setData("letter", props.letter);
   }
   // console.log("DRAGENTER: ", dragEnter)
 
+
   const DropZone = e => {
-    //const letter = e.dataTransfer.letter;
+    // check if dropped letter is in the word
+    // if yes -
+    // props.onDragDrop();
+    // if no -
+    // remove dragged element from dropZone
+
+
     e.preventDefault();
     console.log("DROPZONE: ", props.letter, DropZone)
     props.setNumLetters(Math.floor(Math.random() * 6))
+
   }
-  // console.log("DROPZONE: ", letter, DropZone)
-    
+  console.log("DROPZONE: ", props.letter, DropZone)
+
   return (
     <div
       id={props.id}
@@ -43,8 +53,8 @@ const Letter = props => {
       onDragOver={dragOver}
       onDragLeave={dragLeave}
       onDragEnter={dragEnter}
-      onDrop={e=>DropZone(e)}
-      >
+      onDrop={e => DropZone(e)}
+    >
       <p><img id="letterB-10" data-letter={props.letter} src={`ABCs/${props.letter}.png`} className="img-background"></img></p>
     </div>
   )
