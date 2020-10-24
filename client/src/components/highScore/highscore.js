@@ -11,47 +11,8 @@ class App extends Component {
 }
 const data = {
   title:'Nerdy Wordy Leaderboard',
-  people:[
-    {
-      player: '',
-      mmr:9109,
-    },
-    {
-      player: '',
-      mmr:8967,
-    },
-    {
-      player: '',
-      mmr:8713,
-    },
-    {
-      player: '',
-      mmr:8519,
-    },
-    {
-      player: '',
-      mmr:8473,
-    },
-    {
-      player: '',
-      mmr:8441,
-    },
-    {
-      player: '',
-      mmr:8422,
-    },
-    {
-      player: '',
-      mmr:8343,
-    },
-    {
-      player: '',
-      mmr:8324,
-    },
-    {
-      player: '',
-      mmr:8317,
-    },
+  users:[
+
   ]
 };
 var count=0;
@@ -63,7 +24,7 @@ let Leaderboard = React.createClass({
     return(
       <div className="Leaderboard">
         <Title title={this.state.title}/>
-        <List people={this.state.people}/>
+        <List users={this.state.people}/>
       </div>
     )
   }
@@ -80,21 +41,21 @@ let Title = React.createClass({
 
 let List = React.createClass({
 	compareArray: function(a,b) {
-		if (a.mmr < b.mmr)
+		if (a.score < b.score)
 			return 1;
-		if (a.mmr > b.mmr)
+		if (a.score > b.score)
 			return -1;
 		return 0;
 	},
 	sortArray: function() {
-		return this.props.people.sort(this.compareArray);
+		return this.props.user.sort(this.compareArray);
 	},
 	render: function() {
 		
 		let peopleList = this.sortArray();
 		
 		let people = peopleList.map(function(person, i) {
-			return <Username name={prop.Username} mmr={person.mmr}/>
+			return <Username name={prop.Username} Score={person.Score}/>
 		});
 		
 		return (
@@ -112,7 +73,7 @@ let Person = React.createClass({
 			<li className="Person">
         {count+=1}.
 				<div className="Player">{this.props.Username}</div>
-				<div className="mmr">{this.props.Username}</div>
+				<div className="Score">{this.props.Score}</div>
 			</li>
 		);
 	}
