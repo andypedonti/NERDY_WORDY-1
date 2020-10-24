@@ -1,24 +1,28 @@
 import React, { Component } from 'react'
 
-function scoreBoard(props) {
+
+
+function ScoreBoard({props, state}) {
   return (
     <div>
-      <h1> {props.name} </h1>
+    <div>
+      <h1> {props.username} </h1>
       <p> Score: {props.score} </p>
     </div>
-  )
+  
+    <div
+  {...state.ScoreBoard.map ( username =>
+    <ScoreBoard
+    key={username.id}
+    name={username}
+    score={username.score}/>
+    )  
+  }
+  >
+  </div>
+  </div>
+)
 }
+console.log("Hey You!")
 
-render () {
-    return <div>
-      {this.state.players.map(player =>
-        <Player
-          key={player.id}
-          name={player.name}
-          score={player.score}
-          />      
-      )}
-    </div>
-};
-
-export default scoreBoard;
+export default ScoreBoard;
