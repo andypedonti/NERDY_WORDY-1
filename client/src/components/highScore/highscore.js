@@ -10,7 +10,7 @@ class App extends Component {
   }
 }
 const data = {
-  title:'Nerdy Wordy',
+  title:'Nerdy Wordy Leaderboard',
   people:[
     {
       player: '',
