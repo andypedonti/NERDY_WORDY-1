@@ -1,18 +1,17 @@
+
 import React from "react";
 
-const style = {
-    width: "200px",
-    height: "50px"
-}
-function StartThisShit() {
+function StartButton() {
+
+    function startGame() {
+
+    }
+
     return (
-        <div>
-            <button style={style}>
-                start
-            </button>
+        <div className="start">
+            <button onClick={startGame}>START GAME</button>
         </div>
-
-    )
+    );
 }
 
-export default StartThisShit;
+export default StartButton; 

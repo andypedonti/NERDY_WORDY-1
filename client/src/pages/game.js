@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./originalHome.js";
+import "./game.js";
 import DisplayBox from '../components/displayBox';
 import GameBox from '../components/gameBox/gameBox';
 import "./home.css";
