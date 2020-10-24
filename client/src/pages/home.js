@@ -6,7 +6,7 @@ import "./home.css";
 import ScoreBoard from "../components/scoreBoard/scoreboard.js";
 
 
-
+//NEEDS <SCOREBOARD/>//
 const Home = (props) => {
 
   const [ numLetters, setNumLetters] = useState(5)
