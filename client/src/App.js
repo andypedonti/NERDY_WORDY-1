@@ -41,7 +41,6 @@ const App = () => {
             <Redirect to="/login" />
           </Switch>
         )}
-
     </div>
   );
 };
