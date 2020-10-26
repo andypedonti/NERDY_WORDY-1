@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import "./home.js";
-import DisplayBox from '../components/displayBox';
-import GameBox from '../components/gameBox/gameBox';
+
 import "./home.css";
 import ScoreBoard from "../components/scoreBoard/scoreboard.js";
+=======
+import "../components/startThisShit/start";
+import { startSession } from "mongoose";
+import StartThisShit from "../components/startThisShit/start";
 
 
 //NEEDS <SCOREBOARD/>//
 const Home = (props) => {
+
 
   const [ numLetters, setNumLetters] = useState(5)
   var randomWords = require('random-words');
@@ -19,6 +23,14 @@ const Home = (props) => {
     
   </div>
   );
+=======
+
+    return (
+        <div>
+            <StartThisShit />
+        </div>
+    );
+
 };
 
 Home.propTypes = {};

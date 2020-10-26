@@ -7,7 +7,7 @@ import Login from './pages/login';
 import Signup from './pages/signUp';
 import { LOADING, SET_USER, UNSET_USER } from './store/actions';
 import { useStoreContext } from './store/store';
-import DisplayBox from './components/displayBox';
+import Game from "./components/gameBox/gameBox";
 
 const App = () => {
   const history = useHistory();
@@ -34,7 +34,8 @@ const App = () => {
       {state.user ? (
         <Switch>
           <Route exact path="/" component={Home} />
-          <DisplayBox />
+          <Route exact path="/game" component={Game} />
+
         </Switch>
       ) : (
           <Switch>
