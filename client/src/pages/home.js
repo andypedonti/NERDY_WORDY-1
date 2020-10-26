@@ -7,7 +7,7 @@ import "./home.css";
 const Home = (props) => {
   const [numLetters, setNumLetters] = useState(5)
   const [word, setWord] = useState("")
-  var randomWords = require('random-words');
+  console.log("WORD", word)
   const getARandomWord = () => {
     setWord(randomWords(({ exactly: 1, maxLength: 4, formatter: (word) => word.toUpperCase() })))
   }
