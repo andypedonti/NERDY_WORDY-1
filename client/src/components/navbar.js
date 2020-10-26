@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <Link to="/" onClick={() => window.location.reload()} className="btn btn-link text-light">
-        <span className="text-light"><h3>NEW WORD</h3></span>
+        <span className="text-light"><h3>NEW-WORD</h3></span>
       </Link>
       <button
         className="navbar-toggler"
