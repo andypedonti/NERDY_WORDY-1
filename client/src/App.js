@@ -7,7 +7,6 @@ import Login from './pages/login';
 import Signup from './pages/signUp';
 import { LOADING, SET_USER, UNSET_USER } from './store/actions';
 import { useStoreContext } from './store/store';
-import DisplayBox from './components/displayBox';
 
 const App = () => {
   const history = useHistory();
@@ -34,7 +33,6 @@ const App = () => {
       {state.user ? (
         <Switch>
           <Route exact path="/" component={Home} />
-          <DisplayBox />
         </Switch>
       ) : (
           <Switch>
@@ -43,7 +41,6 @@ const App = () => {
             <Redirect to="/login" />
           </Switch>
         )}
-
     </div>
   );
 };

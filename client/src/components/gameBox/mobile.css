@@ -1,0 +1,78 @@
+@media (max-width: 500px) {
+  body {
+    background-image: url(../bluesimplelandscape.jpg);
+    background-size: 600px;
+  }
+  /* GAMEBOX AREA */
+  .gameBox {
+    width: 480px;
+    height: 345px;
+    box-shadow: 0px 0px 200px 0px cyan;
+    background-size: 480px;
+    margin-top: 30px;
+  }
+  /* GAMEBOX AREA 2 */
+  .flexbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 250px;
+  }
+  /* RESULT BOX SIDE */
+  .flexbox .result {
+    font-size: 30px;
+    width: 200px;
+    height: 340px;
+  }
+  .gheader {
+    margin-left: 75px;
+  }
+  .gheader .letters {
+    padding-top: 20px;
+    padding-left: 0px;
+    font-size: 20px;
+  }
+  /* CASCADING BOX SIDE */
+  .flexbox .board {
+    margin-left: 0px;
+    width: 200px;
+    height: 300px;
+    padding: 15px;
+  }
+  .img-background {
+    background-color: transparent;
+    position: relative;
+    margin-left: 2%;
+    width: 20px;
+  }
+  .flexbox .result div {
+    background-color: darkgreen;
+    width: 20px;
+    float: left;
+  }
+  img {
+    animation: img-background 20s linear infinite;
+  }
+  @keyframes img-background {
+    from {
+      top: -600px;
+    }
+    to {
+      top: 600px;
+    }
+  }
+  .result {
+    background: transparent;
+    position: relative;
+    width: 25%;
+  }
+  nav span h3,
+  nav a h1 {
+    font-size: 24px;
+  }
+
+  .flexbox h1 {
+    font-size: 24px;
+    margin-left: 100px;
+  }
+}
