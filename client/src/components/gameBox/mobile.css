@@ -3,6 +3,10 @@
     background-image: url(../bluesimplelandscape.jpg);
     background-size: 600px;
   }
+  nav span h3,
+  nav a h1 {
+    font-size: 24px;
+  }
   /* GAMEBOX AREA */
   .gameBox {
     width: 480px;
@@ -16,13 +20,17 @@
     margin-left: auto;
     margin-right: auto;
     width: 400px;
-    height: 320px;
+    height: 250px;
   }
   /* RESULT BOX SIDE */
   .flexbox .result {
     font-size: 30px;
     width: 200px;
     height: 340px;
+  }
+  .flexbox h1 {
+    font-size: 24px;
+    margin-left: 100px;
   }
   .gheader {
     margin-left: 75px;
