@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { LOADING, SET_USER } from "../store/actions";
+import { LOADING, SET_USER } from "../store/actions"; 
 import { useStoreContext } from "../store/store";
 import "./login.css";
 
@@ -85,9 +85,25 @@ const Login = () => {
             Login
           </button>
         </div>
-      </form>
+      </form> 
+      
+      <div className="text-center">
+      <div className= "container"> 
+      <div className= "container2">
+      <div className= "instructions">
+        <h1>Instructions</h1>
+        <p>
+          Looking at the word at the top of the page, click and drag the letters on the left to the right. <br/>
+          When you move 4 letters to the page it will determine if its correct. <br/>
+          If there are no letters showing that you need to spell the word hit the reset button.  
+        </p>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
   );
 };
+
 
 export default Login;
