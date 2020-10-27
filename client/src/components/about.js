@@ -1,12 +1,11 @@
 import React from 'react';
 
 const style = { width: "100px" }
-const aboutStyle = { color: "white", fontWeight: "900", fontSize: "3vw", marginRight: "auto", marginLeft: "auto", marginTop: "250px" }
 
 const About = () => (
     <div className="text-center">
         <div className="container">
-            <div style={aboutStyle}>
+            <div className="about">
                 <h1>Nerdy_Wordy Team</h1>
                 <p>
                     The Nerdy_Wordy Team is a cohort from the Chapel Hill UNC Coding Bootcamp.

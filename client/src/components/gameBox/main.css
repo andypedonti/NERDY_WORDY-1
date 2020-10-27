@@ -90,3 +90,12 @@ img {
   position: relative;
   width: 25%;
 }
+
+.about { 
+  color: white; 
+  font-weight: 900px;
+  font-size: 36px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 250px;
+  }
