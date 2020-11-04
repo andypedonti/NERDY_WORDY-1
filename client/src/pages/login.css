@@ -1,19 +1,20 @@
 .container {
   padding-bottom: 20px;
   text-align: center;
+  font-weight: 900;
+}
+
+h2 {
+  color: white;
+  font-weight: 900;
 }
 
 .form-signup {
-  align: center;
-}
-.container2 {
-  background-color: lightgray;
-  opacity: 0.7;
+  text-align: center;
 }
 
 .instructions {
   color: black;
   font-weight: 900 px;
-  font-size: 3vw;
   opacity: 1;
 }

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { LOADING, SET_USER } from "../store/actions"; 
 import { useStoreContext } from "../store/store";
+import WordArt from "react-wordart";
 import "./login.css";
 
 const Login = () => {
@@ -45,7 +46,7 @@ const Login = () => {
   return (
     <div className="text-center">
       <div className="container">
-        <h4>Login</h4>
+        <br /><br /><br /><WordArt text="WELCOME TO NERDY WORDY" theme={`blues`} fontSize={110} />
       </div>
       <form className="form-signin">
         <div className="container">
@@ -89,15 +90,13 @@ const Login = () => {
       
       <div className="text-center">
       <div className= "container"> 
-      <div className= "container2">
       <div className= "instructions">
-        <h1>Instructions</h1>
-        <p>
+        <h1>
+          INSTRUCTIONS<br />
           Looking at the word at the top of the page, click and drag the letters on the left to the right. <br/>
           When you move 4 letters to the page it will determine if its correct. <br/>
           If there are no letters showing that you need to spell the word hit the reset button.  
-        </p>
-    </div>
+        </h1>
     </div>
     </div>
     </div>

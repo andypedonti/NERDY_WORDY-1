@@ -25,13 +25,14 @@ function GameBox({ numLetters, setNumLetters, word, setWord, getARandomWord }) {
   return (
    <div className="gameBox">
         <div className="gheader">
-          <h1 className="letters">LETTERS&emsp;<button onClick={resetGame}>RESET</button>&emsp;&emsp;&emsp;&emsp;&emsp;SOLUTIONS</h1>
+          <h3 className="letters"><button onClick={resetGame}>RESET</button>LETTERS&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;SOLUTIONS</h3>
         </div>
       <main className="flexbox">
         <Board id="board-1" className="board" style={{marginLeft: "20px"}}>
           {lettersToMap.map((letter, i) => 
           <Letter className="letter" draggable="true" key={i} letter={letter} />)}
         </Board>
+        
         <Board id="board-2" className="result" setNumLetters={setNumLetters} word={word} lettersToMap={lettersToMap} >
             <p id="results"></p>
         </Board>
