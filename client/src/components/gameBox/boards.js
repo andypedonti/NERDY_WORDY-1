@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import WordArt from "react-wordart";
+
 function Board(props) {
   const [score, setScore] = useState(0)
   const [results, setResults] = useState([])
@@ -20,17 +22,15 @@ function Board(props) {
     console.log("WORD2", word2)
     if ((word1.length === word2.length) && (word1 !== word2)) {
       return (
-        <h1 style={{ marginRight: "115px", color: "red" }}>
-          YOU LOST!!
-        </h1>
+        <div className="lost">
+          <WordArt text="YOU LOST" theme={"purple"} size={50} />
+        </div>
       )
     }
     if (word1 === word2) {
       return (
-        <div style={{ display: "block" }}>
-          <h1 style={{ marginRight: "115px", color: "green" }}>
-            YOU WON!!
-      </h1>
+        <div className="won">
+          <WordArt text="YOU WON" theme={"superhero"} size={50} />
           {/* <h2>Number guessed: {score}</h2> */}
         </div>
       )

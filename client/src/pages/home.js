@@ -4,6 +4,7 @@ import DisplayBox from '../components/displayBox';
 import GameBox from '../components/gameBox/gameBox';
 import randomWords from 'random-words'
 import "./home.css";
+
 const Home = (props) => {
   const [numLetters, setNumLetters] = useState(5)
   const [word, setWord] = useState("")
