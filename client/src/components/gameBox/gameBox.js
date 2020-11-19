@@ -6,13 +6,13 @@ import "./mobile.css";
 
 function GameBox({ numLetters, setNumLetters, word, setWord, getARandomWord }) {
   useEffect(() => {
-    returnRandomLetters(numLetters)
-  }, [numLetters])
+    returnRandomLetters(numLetters,  returnRandomLetters )
+  }, [numLetters,]);
   const ABCs = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   const [lettersToMap, setLettersToMap] = useState([])
   const returnRandomLetters = numLetters => {
     const lettersMap = []
-    for (let index = 0; index < 100; index++) {
+    for (let index = 0; index < 200; index++) {
       let letter = ABCs[Math.floor(Math.random() * ABCs.length)]
       lettersMap.push(letter)
     }

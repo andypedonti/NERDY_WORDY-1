@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { LOADING, SET_USER } from "../store/actions"; 
+import { LOADING, SET_USER, } from "../store/actions"; 
 import { useStoreContext } from "../store/store";
 import WordArt from "react-wordart";
 import "./login.css";
+import { PromiseProvider } from "mongoose";
 
 const Login = () => {
   const [, /* state */ dispatch] = useStoreContext();
@@ -25,6 +26,7 @@ const Login = () => {
     event.preventDefault();
 
     dispatch({ type: LOADING });
+   
 
     axios
       .post("/api/users/login", {
@@ -34,16 +36,19 @@ const Login = () => {
       .then((response) => {
         if (response.status === 200) {
           dispatch({ type: SET_USER, user: response.data });
-          history.replace("/");
+         
+          
         }
       })
       .catch((error) => {
         console.log("login error: ");
         console.log(error);
       });
+
   };
 
   return (
+
     <div className="text-center">
       <div className="container">
         <br /><br /><br /><WordArt text="WELCOME TO NERDY WORDY" theme={`blues`} fontSize={110} />
@@ -87,7 +92,8 @@ const Login = () => {
           </button>
         </div>
       </form> 
-      
+     
+
       <div className="text-center">
       <div className= "container"> 
       <div className= "instructions">

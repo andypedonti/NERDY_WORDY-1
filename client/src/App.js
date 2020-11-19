@@ -21,7 +21,7 @@ const App = () => {
         history.push('/');
       } else {
         dispatch({ type: UNSET_USER });
-        history.push('/login');
+        history.push('/login');  
       }
     });
   }, [dispatch, history]);
@@ -32,13 +32,14 @@ const App = () => {
 
       {state.user ? (
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
         </Switch>
       ) : (
           <Switch>
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-            <Redirect to="/login" />
+            <Redirect to={"/login"} />
+           
           </Switch>
         )}
     </div>

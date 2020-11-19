@@ -12,8 +12,9 @@ const Home = (props) => {
   const getARandomWord = () => {
     setWord(randomWords(({ exactly: 1, maxLength: 4, formatter: (word) => word.toUpperCase() })))
   }
-  useEffect(() => {
+  useEffect((word) => {
     getARandomWord()
+    console.log("WORD", word)
   }, [])
   return (
     <div>

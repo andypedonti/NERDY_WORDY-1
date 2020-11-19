@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import About from "../components/about";
+import "./start";
 import "./signup.css";
 
 const SignUp = () => {
@@ -83,6 +84,7 @@ const SignUp = () => {
         </div>
       </form>
       <About />
+      <Link to="/start">START</Link>
     </div>
   );
 };

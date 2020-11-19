@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import WordArt from "react-wordart";
+// import Home from "../gameBox/pages/home";
 
 function Board(props) {
   const [score, setScore] = useState(0)
   const [results, setResults] = useState([])
   const drop = e => {
-    e.preventDefault();
+    e.preventDefault(drop);
     console.log('DROPPED TARGET', e.target)
     const letter = e.dataTransfer.getData("letter");
     console.log('letter', letter)
     setResults([...results, letter]);
   }
   const dragOver = e => {
-    e.preventDefault();
+    e.preventDefault(dragOver);
   }
+
   if (results && props.word) {
     console.log("WORD1", results.sort().join(""), "WORD2", props.word[0].split("").sort().join(""))
     let word1 = results.sort().join("")
@@ -30,19 +32,20 @@ function Board(props) {
     if (word1 === word2) {
       return (
         <div className="won">
-          <WordArt text="YOU WON" theme={"superhero"} size={50} />
-          {/* <h2>Number guessed: {score}</h2> */}
+          <WordArt text="YOU WON" theme={"superhero"} size={50} /> 
         </div>
       )
     }
   }
+   
+
   return (
     <div>
       <div
         id={props.id}
         className={props.className}
         onDrop={e => drop(e)}
-        onDragOver={dragOver}
+        onDragOver={e => dragOver(e)}
       >
         {props.children}
         <p>{results}</p>

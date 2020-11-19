@@ -12,6 +12,8 @@ const reducer = (state, action) => {
         ...state,
         loading: true,
       };
+      
+      
 
     case SET_USER:
       return {

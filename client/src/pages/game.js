@@ -4,6 +4,7 @@ import DisplayBox from '../components/displayBox';
 import GameBox from '../components/gameBox/gameBox';
 import "./home.css";
 
+
 const Home = (props) => {
 
   const [numLetters, setNumLetters] = useState(5)
