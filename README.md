@@ -1,6 +1,9 @@
 # NERDY_WORDY
 ### MERN_WITH_PASSPORT
 
+### Deploy Link
+https://nerdy-wordy.herokuapp.com/login
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 [![npm version](https://img.shields.io/badge/axios-----v0.20.0-orange)](https://www.npmjs.com/package/axios)
 [![npm version](https://img.shields.io/badge/react-bootstrap-----green)](https://www.npmjs.com/package/react-bootstrap)
