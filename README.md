@@ -90,6 +90,7 @@ Kobie Watkins
 <br>
 https://kobac44.github.io/Portfolio2/
 
+Deployed Application: https://nerdy-wordy.herokuapp.com/login
 
 ## Credits
 
